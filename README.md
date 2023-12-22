@@ -1,4 +1,4 @@
-<h1> Control window11 with voice command.</h1>h1>
+<h1> Control window11 with voice command.</h1>
   
 <p> This project is about to control windows with voice command, like open some apps and close some apps, minimize tab and search something by voice. </p>
 
