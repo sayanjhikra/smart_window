@@ -1,12 +1,20 @@
 <h2> Control window11 with voice command.<h2/>
-This project is about to control windows with voice command, like open some apps and close some apps, minimize tab and search something by voice.
+<p>This project is about to control windows with voice command, like open some apps and close some apps, minimize tab and search something by voice.</p>
 
-<h4>commands</h4>
+<h5>commands</h5>
 <dl>
-  <dt>open "app name"</dt>
+  <dt> open "app name" </dt>
   <dd> To open app </dd>
-  <dt>close</dt>
-  <dd>for close opening window</dd>
+  <dt> close </dt>
+  <dd> for close opening window </dd>
+  <dt> Minimize </dt>
+  <dd> to minimize window </dd>
+  <dt> Switch </dt>
+  <dd> For switching between opening tabs. </dd>
+  <dt></dt>
+  <dd></dd>
+  <dt></dt>
+  <dd></dd>
   <dt></dt>
   <dd></dd>
 </dl>
