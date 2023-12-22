@@ -48,8 +48,8 @@ def post_reponce(message):
 def go_to_location(path,accu,h,v):
     # "'path' is for full image path"
     # "'accu' for accuracy"
-    # "'h' h for horizontal movement of cursor"
-    # "'v' h for vartical movement of cursor"
+    # "'h' for horizontal movement of cursor"
+    # "'v' for vartical movement of cursor"
     global x, y
     pt.sleep(1)
     posiction = pt.locateOnScreen(path,confidence=accu)
@@ -67,15 +67,14 @@ def go_to_location(path,accu,h,v):
 def open_app(path,accu,h,v,delay):
     # "'path' is for full image path"
     # "'accu' for accuracy"
-    # "'h' h for horizontal movement of cursor"
-    # "'v' h for vartical movement of cursor"
+    # "'h' for horizontal movement of cursor"
+    # "'v' for vartical movement of cursor"
     # ""
     global x, y
     posiction = pt.locateOnScreen(path,confidence=accu)
     if posiction is not None:
         x = posiction[0]
         y = posiction[1]
-
         pt.moveTo(x+h, y+v, duration=0)
         pt.click()
         pt.sleep(delay)
