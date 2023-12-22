@@ -1,4 +1,3 @@
-
 import time
 import pyperclip
 import speech_recognition
@@ -64,7 +63,7 @@ def go_to_location(path,accu,h,v):
         return False
     
 
-#open whatsapp
+#open app
 def open_app(path,accu,h,v,delay):
     # "'path' is for full image path"
     # "'accu' for accuracy"
@@ -98,6 +97,14 @@ def get_active_window():
     split_data.reverse()
     return split_data[0]
 
+#find active window name
+def get_active_chrome_tab():
+    data = wing.GetWindowText (wing.GetForegroundWindow()).lower()
+    split_data = data.rsplit(' - ',2)   
+    split_data.reverse()
+    return split_data[1]
+
+
 websites = {"ai":'chat.openai.com/chat',"trading view":"tradingview.com/chart","youtube":"youtube.com",'figma':'figma.com'}
 
 # open website
@@ -107,3 +114,5 @@ def open_website(p_info):
         web.open(website)
         return True
     else:return False
+# time.sleep(2)
+# print()

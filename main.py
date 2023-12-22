@@ -1,7 +1,5 @@
 # import module
 # module.checker_installer()
-# import pip
-# pip.main(['install', '=r', 'requirements.txt'])
 import tts
 import speech_recognition
 import pyautogui as pt
@@ -26,7 +24,6 @@ def second_opening_process(p_info):
     tts.speak("done")
 
 
-
 with speech_recognition.Microphone() as source2:
     sr.adjust_for_ambient_noise(source2, duration = 5)
     tts.speak('ready')
@@ -40,7 +37,7 @@ with speech_recognition.Microphone() as source2:
 
         if data != '0':
             print(data)
-            m_info = data.split()          
+            m_info = data.split()   
             if asp.basic_navigation(m_info):     #basic navigation----
             
                 p_info = data.split(' ', 1)[1]  
@@ -53,20 +50,16 @@ with speech_recognition.Microphone() as source2:
                             tts.speak("done")
                     else:
                         if len(mlib.get_active_window()) != 0:
-                            gs = asp.app_control(mlib.get_active_window(),m_info,p_info)
-                            if gs == False:
+                            if asp.app_control(mlib.get_active_window(),m_info,p_info) == False:
                                 second_opening_process(p_info)
+                                
                         else:second_opening_process(p_info)
 
                 elif len(m_info) > 1 and (m_info[0]=="search"):             #search--------
-                    # p_info = data.split(' ', 1)[1]
+                    if len(mlib.get_active_window()) != 0:
+                            gs = asp.app_control(mlib.get_active_window(),m_info,p_info)
+                            if gs == False:
+                                second_opening_process(p_info)
+                    else:second_opening_process(p_info)
                     print(p_info)
-                    # mlib.open_app(chrome[m_info[0]],.7,60,20,0)
-                    # pt.typewrite(p_info)#Message type
-                    # pt.hotkey('enter') #key press
-
-
-
-
-
 
