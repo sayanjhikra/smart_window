@@ -27,6 +27,6 @@
 <div>
   <h3> === Usage === </h3>
   <p>
-    
+    Fast you need to install all modules that in requirments.text
   </p>
 </div>
