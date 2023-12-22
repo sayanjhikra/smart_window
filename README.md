@@ -27,7 +27,7 @@
 <div>
   <h3> === Usage === </h3>
   <p>
-    Fast you need to install all modules that in requirments.text <br>
-    
+    Fast you need to install all modules that in requirments.text <br><br>
+    You just simply run main.py file using <code>python main.py</code>
   </p>
 </div>
