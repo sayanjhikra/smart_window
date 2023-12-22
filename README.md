@@ -4,7 +4,7 @@
 
 <h3>commands</h3>
 <dl>
-  <dt>🗣️ open "app name" </dt>
+  <dt> open "app name" </dt>
   <dd> To open app </dd>
   <dt> close </dt>
   <dd> for close opening window </dd>
