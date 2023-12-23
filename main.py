@@ -18,7 +18,7 @@ def second_opening_process(p_info):
     mlib.open_app("images/window_icon.png",.7,10,10,.1)
     mlib.open_app("images/search_icon.png",.7,10,10,0)
 
-    pt.typewrite(p_info)#Message type
+    pt.typewrite("Apps:"+ p_info)#Message type
     pt.hotkey('enter') #key press
     pt.sleep(1)
     tts.speak("done")
@@ -32,8 +32,7 @@ with speech_recognition.Microphone() as source2:
         # data = stt.listen_info()
         audio2=sr.listen(source2,timeout=None,phrase_time_limit=None)
         text_t = sr.recognize_google(audio2)
-        data = str(text_t)
-        data = data.lower()
+        data = str(text_t).lower()
 
         if data != '0':
             print(data)
@@ -52,7 +51,6 @@ with speech_recognition.Microphone() as source2:
                         if len(mlib.get_active_window()) != 0:
                             if asp.app_control(mlib.get_active_window(),m_info,p_info) == False:
                                 second_opening_process(p_info)
-                                
                         else:second_opening_process(p_info)
 
                 elif len(m_info) > 1 and (m_info[0]=="search"):             #search--------

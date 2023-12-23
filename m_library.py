@@ -1,10 +1,7 @@
-import time
-import pyperclip
-import speech_recognition
+import time, pyperclip, speech_recognition
 import pyautogui as pt
 import win32gui as wing
 import webbrowser as web
-
 
 
 #copy to clipbord
