@@ -37,6 +37,7 @@ with speech_recognition.Microphone() as source2:
     while 1:
         # data = stt.listen_info()
         audio2=sr.listen(source2,timeout=None,phrase_time_limit=None)
+        print("ll")
         # text_t = sr.recognize_google(audio2)
         text_t = sr.recognize_google(audio2)
         print(text_t)
